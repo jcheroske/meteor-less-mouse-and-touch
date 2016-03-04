@@ -1,0 +1,37 @@
+@EMPTY: {};
+
+.touch(@default: @EMPTY; @touch: @EMPTY; @active: @EMPTY) {
+  .touch & {
+    @default();
+
+    &:active, &.active {
+      @active();
+
+      &:hover, &:focus:hover, &.focus:hover {
+        @touch();
+      }
+    }
+  }
+}
+
+.mouse(@default: @EMPTY; @hover: @EMPTY; @click: @EMPTY; @active: @EMPTY) {
+  .no-touch & {
+    @default();
+
+    &:hover, &:focus:hover, &:focus.hover {
+      @hover();
+    }
+    &:active, &.active {
+      @active();
+
+      &:hover, &:focus:hover, &:focus.hover {
+        @click();
+      }
+    }
+  }
+}
+
+.mouse-and-touch(@default: @EMPTY; @hover: @EMPTY; @click: @EMPTY; @touch: @EMPTY; @active: @EMPTY) {
+  #mixin > .touch(@default; @touch; @active);
+  #mixin > .mouse(@default; @hover; @click; @active);
+}
