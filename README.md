@@ -12,7 +12,7 @@ $ meteor add jcheroske:less-mouse-and-touch
 
 Note: all mixin detached rulesets are optional and default to the empty ruleset.
 
-## .mouse mixin
+### .mouse mixin
 
 ```less
 .mouse(@default, @hover, @click, @active);
@@ -20,7 +20,7 @@ Note: all mixin detached rulesets are optional and default to the empty ruleset.
 
 * @default
 
-  A detached ruleset of styles applied with no mouse activity.
+  A detached ruleset of styles applied initially.
   
 * @hover
 
@@ -32,9 +32,9 @@ Note: all mixin detached rulesets are optional and default to the empty ruleset.
   
 * @active
 
-  A detached ruleset of styles appliced when the element has the `active` class applied.
+  A detached ruleset of styles appliced when the element has the `active` class.
 
-## Example
+#### Example
 
 ```less
 .common-button {
@@ -46,6 +46,39 @@ Note: all mixin detached rulesets are optional and default to the empty ruleset.
     @click: {
       background-color: red;
       border-color: white;
+    };
+  )
+}
+```
+
+### .touch mixin
+
+```less
+.touch(@default, @touch, @active);
+```
+
+* @default
+
+  A detached ruleset of styles applied initially.
+  
+* @touch
+  
+  A detached ruleset of styles applied when the user is actively touching the element.
+  
+* @active
+
+  A detached ruleset of styles applied when the element has the `active` class.
+  
+#### Example
+
+```less
+.dropdown-toggle {
+  .touch(
+    @touch: {
+      background-color: green;
+      span {
+        color: black;
+      }
     };
   )
 }
