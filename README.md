@@ -18,19 +18,19 @@ Note: all mixin detached rulesets are optional and default to the empty ruleset.
 .mouse(@default, @hover, @click, @active);
 ```
 
-* @default
+* **@default**
 
   A detached ruleset of styles applied initially.
   
-* @hover
+* **@hover**
 
   A detached ruleset of styles applied when the mouse is hovering over the element.
   
-* @click
+* **@click**
 
   A detached ruleset of styles applied when the mouse is actually clicking.
   
-* @active
+* **@active**
 
   A detached ruleset of styles appliced when the element has the `active` class.
 
@@ -57,15 +57,15 @@ Note: all mixin detached rulesets are optional and default to the empty ruleset.
 .touch(@default, @touch, @active);
 ```
 
-* @default
+* **@default**
 
   A detached ruleset of styles applied initially.
   
-* @touch
+* **@touch**
   
   A detached ruleset of styles applied when the user is actively touching the element.
   
-* @active
+* **@active**
 
   A detached ruleset of styles applied when the element has the `active` class.
   
