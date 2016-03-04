@@ -12,23 +12,23 @@ $ meteor add jcheroske:less-mouse-and-touch
 
 To include the mixins in your current less project, simply use LESS `@import` combined with the new Meteor package syntax:
 
-* Touch mixin only:
+* **Touch mixin only:**
 ```less
   @import "{jcheroske:less-mouse-and-touch}/mouse.import.less";
 ```
 
 
-* Mouse mixin only:
+* **Mouse mixin only:**
 ```less
   @import "{jcheroske:less-mouse-and-touch}/touch.import.less";
 ```
 
 
-* Both touch and mouse mixins:
+* **Both touch and mouse mixins:**
 ```less
   @import "{jcheroske:less-mouse-and-touch}/mouse-and-touch.import.less";
 ```
-*Note: this is the only import needed.*
+*Note: Only one of these imports are needed in any file.*
 
 ## Mixins
 
