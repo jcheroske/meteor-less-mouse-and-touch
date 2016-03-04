@@ -8,6 +8,26 @@ Three LESS mixins that allow for easy CSS styling of the basic mouse- and touchs
 $ meteor add jcheroske:less-mouse-and-touch
 ```
 
+## Inclusion in LESS sources
+
+To include the mixins in your current less project, simply use LESS `@import` combined with the new Meteor package syntax:
+
+```less
+@import "{jcheroske:less-mouse-and-touch}/mouse.import.less";
+```
+
+or
+
+```less
+@import "{jcheroske:less-mouse-and-touch}/touch.import.less";
+```
+
+or
+
+```less
+@import "{jcheroske:less-mouse-and-touch}/mouse-and-touch.import.less";
+```
+
 ## Mixins
 
 Note: all mixin detached rulesets are optional and default to the empty ruleset.
