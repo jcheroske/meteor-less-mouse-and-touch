@@ -1,0 +1,9 @@
+@import "mouse.import.less";
+@import "touch.import.less";
+
+@EMPTY: {};
+
+.mouse-and-touch(@default: @EMPTY; @hover: @EMPTY; @click: @EMPTY; @touch: @EMPTY; @active: @EMPTY) {
+  .touch(@default; @touch; @active);
+  .mouse(@default; @hover; @click; @active);
+}

@@ -1,0 +1,15 @@
+@EMPTY: {};
+
+.touch(@default: @EMPTY; @touch: @EMPTY; @active: @EMPTY) {
+  .touchevents & {
+    @default();
+
+    &:active, &.active {
+      @active();
+
+      &:hover, &:focus:hover, &.focus:hover {
+        @touch();
+      }
+    }
+  }
+}

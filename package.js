@@ -8,6 +8,13 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
+
   api.use('less');
-  api.addFiles('imports/mouse-and-touch.import.less', ['client']);
+  api.use('jcheroske:modernizr-touch');
+
+  api.addFiles([
+    'mouse.import.less',
+    'touch.import.less',
+    'mouse-and-touch.import.less'
+  ], ['client']);
 });
